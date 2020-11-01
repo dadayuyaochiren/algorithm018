@@ -24,6 +24,9 @@ public class HomeWork1 {
              element()  -->     getFirst()
              peek()     -->     peekFirst()
          */
+
+        System.out.println((-1 % 8));
+
         Deque<String> deque = new LinkedList<String>();
         //原api
         deque.push("a");
