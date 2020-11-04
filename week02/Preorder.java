@@ -16,13 +16,15 @@ class Node {
     }
 };
 
+/**
+ *
+ */
 
 public class Preorder {
     public List<Integer> preorder(Node root) {
         //定义返回的集合
         List<Integer> res = new ArrayList<>();
         if (root == null) return res;
-        //双段队列更通用
         Stack<Node> stack = new Stack<>();
         // 先将root 入队
         stack.push(root);
