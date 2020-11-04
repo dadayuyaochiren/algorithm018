@@ -35,7 +35,8 @@ public class Inordertranversal {
                 root = root.left;
             }
             // 弹栈并检查右节点
-            res.add(stack.pop().val);
+            root = stack.pop();
+            res.add(root.val);
             root = root.right;
         }
         return res;
