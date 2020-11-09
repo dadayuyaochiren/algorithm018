@@ -24,8 +24,8 @@ public class Combine {
             res.add(new ArrayList<>(list));
             return;
         }
-        // 边界 这里 进行 剪枝(这里 关注...)
-        for (int i =begin ; i <=n - (k - list.size()) + 1 ; i++){
+        // 边界 这里 进行 剪枝(这里 关注...)  k-list.size() 还需要几个值
+        for (int i =begin ; i <= n - (k-list.size()) +1  ; i++){
             list.add(i);
             // 下次 begin 从 i +1 开始
             backStack(res, list, n, k,i+1);
