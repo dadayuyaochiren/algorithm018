@@ -9,7 +9,7 @@ import java.rmi.activation.ActivationGroupID;
 
 public class NumIslands {
 
-    public int numIslands(char[][] grid) {
+    public static int numIslands(char[][] grid) {
         int res = 0;
 
         // 二维数组的遍历
@@ -33,7 +33,7 @@ public class NumIslands {
      * @param j      列位置
      * @param i      行位置
      */
-    private void dfs(char[][] grid, int j, int i) {
+    private  static void dfs(char[][] grid, int j, int i) {
         if ( i<0 || j <0 || j >= grid.length || i>= grid[j].length ||grid[j][i] == '0'){
             return;
         }
@@ -44,14 +44,14 @@ public class NumIslands {
         dfs(grid,j,i+1);
         dfs(grid,j-1,i);
         dfs(grid,j,i-1);
+
     }
 
 
     public static void main(String[] args) {
-        
+        char[][] grid = new char[][]{{'1','1','1'},{'0','1','0'},{'1','1','1'}};
+        System.out.println(numIslands(grid));
 
-   
-        
     }
 
 }
